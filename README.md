@@ -21,3 +21,12 @@ A hands-on cybersecurity portfolio project demonstrating how to securely expose 
 * Initialized the tunnel from the terminal:
   ```bash
   cloudflared tunnel --url http://localhost:8080
+  ---
+
+## 🛡️ Implementing Zero Trust Gateway Security Controls
+This lab incorporates modern perimeter-less security principles rather than relying on traditional network-edge assumptions:
+* **Layer 7 Inspection:** Configured HTTP firewall policies in Cloudflare Zero Trust to inspect application-layer traffic targeting the tunnel endpoint.
+* **Granular Rule Actions:** Enforced explicit **Block** rules (`DVWA-security-shield`) to control access and mitigate unauthorized exposure of sensitive endpoints.
+* **Secure Ingress Architecture:** Leveraged outbound-only tunneling (`cloudflared`) to eliminate the need for vulnerable open inbound ports on local routers.
+*
+Add Zero Trust security controls explanation to documentation
